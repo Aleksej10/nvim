@@ -138,8 +138,8 @@ nnoremap <A-0> 10gt
 
 " Bar-Bar
 " Move to previous/next
-" nnoremap <silent>    <A-i> :BufferPrevious<CR>
-" nnoremap <silent>    <A-o> :BufferNext<CR>
+nnoremap <silent>    <A-<> :BufferPrevious<CR>
+nnoremap <silent>    <A->> :BufferNext<CR>
 " " Goto buffer in position...
 " nnoremap <silent>    <A-1> :BufferGoto 1<CR>
 " nnoremap <silent>    <A-2> :BufferGoto 2<CR>
