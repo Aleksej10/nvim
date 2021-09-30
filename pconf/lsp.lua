@@ -17,7 +17,7 @@ local lspconfig = require('lspconfig')
 lspconfig.solargraph.setup {
   capabilities = capabilities,
   cmd = { "solargraph", "stdio" },
-  filetypes = O.ruby.filetypes,
+  filetypes = { 'ruby' },
   flags = { debounce_text_changes = 150, },
   on_attach = function(_, _)
     print("Attached to Solargraph")

@@ -43,7 +43,6 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'hrsh7th/vim-vsnip'
   Plug 'mattn/emmet-vim'
 
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
 
   Plug 'vimwiki/vimwiki'
   Plug 'nvim-lua/popup.nvim'
@@ -60,11 +59,14 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'neovim/nvim-lspconfig'
   Plug 'kabouzeid/nvim-lspinstall'
   Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
-  " Plug 'ray-x/navigator.lua'
-  Plug 'glepnir/lspsaga.nvim'
+  Plug 'ray-x/navigator.lua'
+  " Plug 'glepnir/lspsaga.nvim'
   Plug 'folke/trouble.nvim'
   Plug 'simrat39/symbols-outline.nvim'
   " Plug 'kosayoda/nvim-lightbulb'
+
+  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+  Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
   Plug 'RishabhRD/popfix'
   Plug 'RishabhRD/nvim-lsputils'
@@ -77,10 +79,11 @@ call SourceLocal('treesitter.lua')
 call SourceLocal('telescope.lua')
 call SourceLocal('galaxyline.lua')
 call SourceLocal('compe.lua')
+call SourceLocal('lsp.lua')
 call SourceLocal('lspinstall.lua')
 call SourceLocal('trouble.lua')
-" call SourceLocal('navigator.lua')
-call SourceLocal('lspsaga.lua')
+call SourceLocal('navigator.lua')
+" call SourceLocal('lspsaga.lua')
 call SourceLocal('lspsignature.lua')
 " call SourceLocal('lightbulb.lua')
 call SourceLocal('lsputils.lua')
