@@ -50,7 +50,7 @@ require('navigator').setup({
     -- {key = "<Space>la", mode = "n", func = "require('navigator.codelens').run_action()"},
   }, -- a list of key maps
   treesitter_analysis = true, -- treesitter variable context
-  code_action_prompt = {enable = true, sign = true, sign_priority = 40, virtual_text = true},
+  -- code_action_prompt = {enable = true, sign = true, sign_priority = 40, virtual_text = true},
   icons = {
     icons = true, -- set to false to use system default ( if you using a terminal does not have nerd/icon)
     -- Code action
@@ -86,7 +86,7 @@ require('navigator').setup({
     },
     treesitter_defult = "🌲",
   },
-  lspinstall = true,
+  lspinstaller = true,
   -- lsp = {
   --   format_on_save = false, -- set to false to disasble lsp code format on save (if you are using prettier/efm/formater etc)
   --   diagnostic_virtual_text = true,  -- show virtual for diagnostic message

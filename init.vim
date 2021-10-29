@@ -57,7 +57,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
 
   Plug 'neovim/nvim-lspconfig'
-  Plug 'kabouzeid/nvim-lspinstall'
+  " Plug 'kabouzeid/nvim-lspinstall'
+  Plug 'williamboman/nvim-lsp-installer'
   Plug 'ray-x/guihua.lua', {'do': 'cd lua/fzy && make' }
   Plug 'ray-x/navigator.lua'
   " Plug 'glepnir/lspsaga.nvim'
@@ -80,7 +81,8 @@ call SourceLocal('telescope.lua')
 call SourceLocal('galaxyline.lua')
 call SourceLocal('compe.lua')
 call SourceLocal('lsp.lua')
-call SourceLocal('lspinstall.lua')
+" call SourceLocal('lspinstall.lua')
+call SourceLocal('lspinstaller.lua')
 call SourceLocal('trouble.lua')
 call SourceLocal('navigator.lua')
 " call SourceLocal('lspsaga.lua')
