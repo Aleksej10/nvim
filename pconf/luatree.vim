@@ -125,6 +125,9 @@ require'nvim-tree'.setup {
    filters = {
      custom = { '.git', 'node_modules', '.cache', '.idea', 'Gemfile.lock' }
    },
+  git = {
+    enable = false
+  },
   -- disables netrw completely
   disable_netrw       = false,
   -- hijack netrw window on startup
