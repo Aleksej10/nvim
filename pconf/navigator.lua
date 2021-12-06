@@ -1,6 +1,6 @@
 require('navigator').setup({
   debug = false, -- log output not implemented
-  code_action_icon = " ",
+  -- code_action_icon = " ",
   width = 0.75, -- number of cols for the floating window
   height = 0.3, -- preview window size, 0.3 by default
   border = {"╭", "─", "╮", "│", "╯", "─", "╰", "│"}, -- border style, can be one of 'none', 'single', 'double',
@@ -86,15 +86,30 @@ require('navigator').setup({
     },
     treesitter_defult = "🌲",
   },
-  lspinstaller = true,
-  -- lsp = {
-  --   format_on_save = false, -- set to false to disasble lsp code format on save (if you are using prettier/efm/formater etc)
-  --   diagnostic_virtual_text = true,  -- show virtual for diagnostic message
-  --   diagnostic_update_in_insert = false, -- update diagnostic message in insert mode
-  --   disply_diagnostic_qf = true,
-  --   solargraph = {},
-  --   tsserver = {
-  --     filetypes = {'typescript', 'javascript'}
-  --   },
-  -- }
+  -- lspinstaller = true,
+  lsp = {
+    code_action = {enable = true, sign = true, sign_priority = 40, virtual_text = true},
+    code_lens_action = {enable = true, sign = true, sign_priority = 40, virtual_text = true},
+    format_on_save = false, -- set to false to disasble lsp code format on save (if you are using prettier/efm/formater etc)
+    -- disable_format_cap = {"sqls", "sumneko_lua", "gopls"},  -- a list of lsp disable format capacity (e.g. if you using efm or vim-codeformat etc), empty {} by default
+    -- disable_lsp = {'pylsd', 'sqlls'}, -- a list of lsp server disabled for your project, e.g. denols and tsserver you may
+    -- only want to enable one lsp server
+    -- to disable all default config and use your own lsp setup set
+    -- disable_lsp = 'all'
+    -- Default {}
+    diagnostic_scrollbar_sign = {'▃', '▆', '█'}, -- experimental:  diagnostic status in scroll bar area; set to false to disable the diagnostic sign,
+    -- for other style, set to {'╍', 'ﮆ'} or {'-', '='}
+    diagnostic_virtual_text = true,  -- show virtual for diagnostic message
+    diagnostic_update_in_insert = false, -- update diagnostic message in insert mode
+    disply_diagnostic_qf = true, -- always show quickfix if there are diagnostic errors, set to false if you  want to
+    -- solargraph = {},
+    tsserver = {
+      filetypes = {'typescript', 'javascript'} -- disable javascript etc,
+      -- set to {} to disable the lspclient for all filetypes
+    },
+    servers = {'cmake', 'tsserver', 'pylsp', 'html', 'solargraph', 'cssls', 'yamlls', 'sqls'}, -- by default empty, but if you whant navigator load  e.g. `cmake` and `ltex` for you , you
+    -- can put them in the `servers` list and navigator will auto load them.
+    -- you could still specify the custom config  like this
+    -- cmake = {filetypes = {'cmake', 'makefile'}, single_file_support = false},
+  }
 })

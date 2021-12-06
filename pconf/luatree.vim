@@ -2,7 +2,7 @@ nnoremap <C-n> :NvimTreeToggle<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
 
 
-let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache', '.idea', 'Gemfile.lock' ] "empty by default
+" let g:nvim_tree_ignore = [ '.git', 'node_modules', '.cache', '.idea', 'Gemfile.lock' ] "empty by default
 " let g:nvim_tree_auto_open = 1 "0 by default, opens the tree when typing `vim $DIR` or `vim`
 " let g:nvim_tree_auto_close = 1 "0 by default, closes the tree when it's the last window
 " let g:nvim_tree_follow = 0 "0 by default, this option allows the cursor to be updated when entering a buffer
@@ -121,6 +121,10 @@ local list = {
 }
 
 require'nvim-tree'.setup {
+  -- ignore files
+   filters = {
+     custom = { '.git', 'node_modules', '.cache', '.idea', 'Gemfile.lock' }
+   },
   -- disables netrw completely
   disable_netrw       = false,
   -- hijack netrw window on startup
