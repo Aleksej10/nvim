@@ -4,7 +4,7 @@ require'nvim-treesitter.configs'.setup {
   -- Modules and its options for treesitter
 
   -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = { "ruby", "javascript", "html", "css", "lua", "bash" },
+  ensure_installed = { "ruby", "javascript", "html", "css", "lua", "bash", "c" },
   highlight = {
     enable = true,
     -- the following is needed to fix matchit/% code block matching from breaking
@@ -16,7 +16,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true
   },
   incremental_selection = {
-    enable = enabled,
+    enable = true,
     keymaps = {
       init_selection = "gni",
       node_incremental = "gna",
@@ -25,13 +25,13 @@ require'nvim-treesitter.configs'.setup {
     },
   },
   query_linter = {
-    enable = enabled,
+    enable = true,
     use_virtual_text = true,
     lint_events = {"BufWrite", "CursorHold"},
   },
   textobjects = {
     select = {
-      enable = enabled,
+      enable = true,
       keymaps = {
         ['af'] = '@function.outer',
         ['if'] = '@function.inner',
