@@ -66,8 +66,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'simrat39/symbols-outline.nvim'
   " Plug 'kosayoda/nvim-lightbulb'
 
-  Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
-  Plug 'nvim-treesitter/nvim-treesitter-refactor'
+  " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
+  " Plug 'nvim-treesitter/nvim-treesitter-refactor'
 
   Plug 'RishabhRD/popfix'
   Plug 'RishabhRD/nvim-lsputils'
@@ -76,7 +76,7 @@ call plug#end()
 call SourceLocal('luatree.vim')
 call SourceLocal('neoscroll.lua')
 call SourceLocal('sniprun.lua')
-call SourceLocal('treesitter.lua')
+" call SourceLocal('treesitter.lua')
 call SourceLocal('telescope.lua')
 call SourceLocal('galaxyline.lua')
 call SourceLocal('compe.lua')
@@ -100,7 +100,7 @@ let g:user_emmet_leader_key='<leader>e'
 
 " Indent stuff 
 let g:indent_blankline_enabled = v:false
-let g:indent_blankline_use_treesitter = v:true
+" let g:indent_blankline_use_treesitter = v:true
 nnoremap <leader>i :IndentBlanklineToggle!<cr>
 
 " commentary:
