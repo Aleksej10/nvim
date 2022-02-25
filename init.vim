@@ -68,6 +68,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} 
   " Plug 'nvim-treesitter/nvim-treesitter-refactor'
+  Plug 'wfxr/minimap.vim'
 
   Plug 'RishabhRD/popfix'
   Plug 'RishabhRD/nvim-lsputils'
@@ -93,6 +94,7 @@ call SourceLocal('symbolsoutline.lua')
 call SourceLocal('whichkey.lua')
 call SourceLocal('vgit.lua')
 call SourceLocal('diffview.lua')
+call SourceLocal('minimap.vim')
 
 
 

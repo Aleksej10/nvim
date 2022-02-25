@@ -24,7 +24,7 @@ local colors = {
 }
 local condition = require('galaxyline.condition')
 local gls = gl.section
-gl.short_line_list = {'NvimTree', 'Plugins'}
+gl.short_line_list = {'NvimTree', 'Plugins', 'MINIMAP' }
 
 table.insert(gls.left, {
     ViMode = {
