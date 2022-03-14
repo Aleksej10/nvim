@@ -25,10 +25,19 @@ set noshowmode
 let g:elite_mode=1
 
 
+
+
 "theme
 " let g:one_allow_italics = 1
+let g:gruvbox_bold = 1
 let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = "soft"
+let g:gruvbox_contrast_dark = "dark"
+let g:gruvbox_transparent_bg = 1
+let g:gruvbox_underline = 1
+let g:gruvbox_undercurl = 1
+let g:gruvbox_termcolors = 1
+let g:gruvbox_italicize_comments = 1
+let g:gruvbox_italicize_strings = 1
 
 " colorscheme PaperColor, bluedrake, blueprint, bluez, nord
 set bg=dark
@@ -58,7 +67,7 @@ noremap T <C-W>T
 noremap X <C-W>x
 
 " Terminal
-noremap <leader>tt :6split term://zsh<cr>i
+noremap <leader>tt :10split term://zsh<cr>i
 tnoremap <esc> <C-\><C-n>
 tnoremap jk <C-\><C-n>
 tnoremap <C-h> <C-\><C-N><C-w>h

@@ -11,7 +11,8 @@ function! SourceLocal(file)
 endfunction
 
 call plug#begin('$HOME/.config/nvim/plugged')
-  Plug 'flazz/vim-colorschemes'
+  " Plug 'flazz/vim-colorschemes'
+  Plug 'morhetz/gruvbox'
 
   Plug 'folke/lsp-colors.nvim'
   Plug 'ap/vim-css-color'
@@ -38,6 +39,8 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'townk/vim-autoclose'
+
+  Plug 'rust-lang/rust.vim'
 
   Plug 'hrsh7th/nvim-compe'
   Plug 'hrsh7th/vim-vsnip'
