@@ -10,6 +10,7 @@ set smarttab
 set showcmd
 set nowrap
 set tabstop=2 shiftwidth=2
+set expandtab
 set cursorline
 set autoindent
 set ignorecase

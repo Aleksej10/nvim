@@ -131,3 +131,5 @@ call SourceLocal('basics.vim')
 inoremap <leader><leader> <esc>/<++><Enter>"_c4l
 vnoremap <leader><leader> <esc>/<++><Enter>"_c4l
 map <leader><leader> /<++><Enter>"_c4l
+
+autocmd Filetype * setlocal tabstop=4 shiftwidth=2 expandtab
