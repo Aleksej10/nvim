@@ -5,12 +5,8 @@ set hidden
 set noswapfile
 set nobackup
 set nowritebackup
-set expandtab
-set smarttab
 set showcmd
 set nowrap
-set tabstop=2 shiftwidth=2
-set expandtab
 set cursorline
 set autoindent
 set ignorecase
@@ -25,36 +21,13 @@ set wildmode=longest:full,full
 set noshowmode
 let g:elite_mode=1
 
+" Disables automatic commenting on newline:
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+set listchars=tab:>~
+set list
 
-
-"theme
-" let g:one_allow_italics = 1
-let g:gruvbox_bold = 1
-let g:gruvbox_italic = 1
-let g:gruvbox_contrast_dark = "dark"
-let g:gruvbox_transparent_bg = 1
-let g:gruvbox_underline = 1
-let g:gruvbox_undercurl = 1
-let g:gruvbox_termcolors = 1
-let g:gruvbox_italicize_comments = 1
-let g:gruvbox_italicize_strings = 1
-
-" colorscheme PaperColor, bluedrake, blueprint, bluez, nord
-set bg=dark
-colorscheme gruvbox
-set fillchars+=vert:\ 
-hi! Normal ctermbg=None guibg=None
-hi! LineNr ctermbg=None guibg=None
-hi! SignColumn guibg=None
-hi! StatusLineNC guifg=None guibg=None
-hi! VertSplit guifg=None guibg=None
-hi! StatusLineNC guifg=None guibg=None
-hi! VertSplit guifg=None guibg=None
-hi! CursorLine term=bold cterm=bold
-
-" hides tildas on newlines
-" hi! NonText guifg=bg
+set guifont=hive:h12
 
 " Splits open at the bottom and right
 set splitbelow splitright
@@ -86,6 +59,15 @@ nnoremap <C-m> @m
 vnoremap <C-c> "*y :let @+=@*<cr>
 noremap <C-p> "+p
 
+nnoremap < <<<esc>
+nnoremap > >><esc>
+nnoremap <leader>/ :nohlsearch<cr>
+
+" TODO rarely used, use longer name
+vnoremap <leader>s c<++><esc>:read!echo<space>$((<C-r>"))<cr>kJde:.s/<++>/<C-r>"<cr>:noh<cr>
+nnoremap <leader>dt :%s:\s\+$::ge<cr>:nohlsearch<cr>
+nnoremap <leader>rt :retab<cr>
+
 " Folding
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
@@ -100,12 +82,12 @@ nnoremap <leader><space>c zM
 nnoremap <leader><space>o zR
 
 
-" netrw
-let g:netrw_banner = 0
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
+" " netrw
+" let g:netrw_banner = 0
+" let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 4
+" let g:netrw_altv = 1
+" let g:netrw_winsize = 25
 
 " super usefull
 nnoremap <C-s> :w!<cr>
@@ -129,9 +111,6 @@ nnoremap <A-=> A=
 nnoremap <A-.> A.
 nnoremap <A-,> A,
 nnoremap <A-{> A{}<left><cr><esc>O
-
-noremap <leader>mc :! make clean && make<cr>
-noremap <leader>mb :! make backup<cr>
 
 nnoremap <A-i> gT
 nnoremap <A-o> gt
@@ -168,12 +147,5 @@ nnoremap <silent>    <A-q> :BufferClose<CR>
 nnoremap <silent>    <A-Q> :BufferCloseAllButPinned<CR>
 nnoremap <silent>    <A-s> :BufferPick<CR>
 
-
-
-
-nnoremap < <<<esc>
-nnoremap > >><esc>
-nnoremap <leader>/ :nohlsearch<cr>
-
-vnoremap <leader>s c<++><esc>:read!echo<space>$((<C-r>"))<cr>kJde:.s/<++>/<C-r>"<cr>:noh<cr>
-nnoremap <leader>dt :%s:\s\+$::ge<cr>:nohlsearch<cr>
+" sane tab widths
+autocmd FileType * setlocal tabstop=2 shiftwidth=2 expandtab smarttab
