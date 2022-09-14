@@ -16,7 +16,6 @@ set visualbell
 set sidescrolloff=7
 set scrolloff=3
 set shortmess+=c
-" set completeopt=menuone,noselect
 set wildmode=longest:full,full
 set noshowmode
 let g:elite_mode=1
@@ -28,6 +27,7 @@ set listchars=tab:>~
 set list
 
 set guifont=hive:h12
+" set guifont=hive:h8
 
 " Splits open at the bottom and right
 set splitbelow splitright
@@ -127,8 +127,8 @@ nnoremap <A-0> 10gt
 
 " Bar-Bar
 " Move to previous/next
-nnoremap <silent>    <A-<> :BufferPrevious<CR>
-nnoremap <silent>    <A->> :BufferNext<CR>
+" nnoremap <silent>    <A-<> :BufferPrevious<CR>
+" nnoremap <silent>    <A->> :BufferNext<CR>
 " " Goto buffer in position...
 " nnoremap <silent>    <A-1> :BufferGoto 1<CR>
 " nnoremap <silent>    <A-2> :BufferGoto 2<CR>
@@ -140,12 +140,12 @@ nnoremap <silent>    <A->> :BufferNext<CR>
 " nnoremap <silent>    <A-8> :BufferGoto 8<CR>
 " nnoremap <silent>    <A-9> :BufferGoto 9<CR>
 " nnoremap <silent>    <A-0> :BufferLast<CR>
-" Pin/unpin buffer
-nnoremap <silent>    <A-p> :BufferPin<CR>
-" Close buffer
-nnoremap <silent>    <A-q> :BufferClose<CR>
-nnoremap <silent>    <A-Q> :BufferCloseAllButPinned<CR>
-nnoremap <silent>    <A-s> :BufferPick<CR>
+" " Pin/unpin buffer
+" nnoremap <silent>    <A-p> :BufferPin<CR>
+" " Close buffer
+" nnoremap <silent>    <A-q> :BufferClose<CR>
+" nnoremap <silent>    <A-Q> :BufferCloseAllButPinned<CR>
+" nnoremap <silent>    <A-s> :BufferPick<CR>
 
 " sane tab widths
 autocmd FileType * setlocal tabstop=2 shiftwidth=2 expandtab smarttab

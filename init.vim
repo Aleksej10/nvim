@@ -24,6 +24,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'ggandor/lightspeed.nvim'
 
+  " markdown
+  Plug 'godlygeek/tabular'
+  Plug 'preservim/vim-markdown'
 
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-commentary'
@@ -31,6 +34,12 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   " Plug 'vimwiki/vimwiki'
+
+  " git
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'sindrets/diffview.nvim'
 
   Plug 'glepnir/galaxyline.nvim' , {'branch': 'main'}
   Plug 'kyazdani42/nvim-tree.lua'
@@ -63,11 +72,13 @@ call SourceLocal('indent.lua')
 call SourceLocal('cursorline.lua')
 call SourceLocal('lightspeed.lua')
 call SourceLocal('powerline.lua')
+call SourceLocal('markdown.vim')
 call SourceLocal('completition.lua')
 call SourceLocal('luatree.lua')
 call SourceLocal('emmet.vim')
 call SourceLocal('lsp.lua')
-" call SourceLocal('treesitter.lua')
+call SourceLocal('treesitter.lua')
 call SourceLocal('telescope.lua')
+call SourceLocal('gitdiff.lua')
 
 call SourceLocal('basic.vim')
