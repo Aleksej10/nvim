@@ -14,7 +14,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'morhetz/gruvbox'
 
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'rrethy/vim-hexokinase' ", { 'do': 'make hexokinase' }
+  Plug 'rrethy/vim-hexokinase' , { 'do': 'make hexokinase' }
   Plug 'lukas-reineke/indent-blankline.nvim'
 
   Plug 'kyazdani42/nvim-web-devicons'
@@ -45,7 +45,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'kyazdani42/nvim-tree.lua'
   Plug 'nvim-telescope/telescope.nvim'
 
-  Plug 'nvim-treesitter/nvim-treesitter' ", {'do': ':TSUpdate'}
+  Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
 
   " lsp
   Plug 'neovim/nvim-lspconfig'
@@ -65,7 +65,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
   Plug 'mattn/emmet-vim'
 call plug#end()
 
-" call SourceLocal('rust.lua')
+" " call SourceLocal('rust.lua')
 call SourceLocal('color_preview.vim')
 call SourceLocal('colorscheme.vim')
 call SourceLocal('indent.lua')
