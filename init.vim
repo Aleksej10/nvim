@@ -47,6 +47,9 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'nvim-treesitter/nvim-treesitter' , {'do': ':TSUpdate'}
 
+  " Plug 'ray-x/go.nvim'
+  " Plug 'ray-x/guihua.lua'
+
   " lsp
   Plug 'neovim/nvim-lspconfig'
 
@@ -61,6 +64,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
   Plug 'hrsh7th/cmp-vsnip'
   Plug 'hrsh7th/vim-vsnip'
+  Plug 'rafamadriz/friendly-snippets'
 
   Plug 'mattn/emmet-vim'
 call plug#end()
@@ -80,5 +84,6 @@ call SourceLocal('lsp.lua')
 call SourceLocal('treesitter.lua')
 call SourceLocal('telescope.lua')
 call SourceLocal('gitdiff.lua')
+" call SourceLocal('go.lua')
 
 call SourceLocal('basic.vim')

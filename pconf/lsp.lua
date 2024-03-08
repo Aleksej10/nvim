@@ -42,7 +42,22 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'rust_analyzer', 'solargraph', 'tsserver', 'tailwindcss', 'gopls', 'eslint' }
+local servers = { 
+  'pyright', 
+  'rust_analyzer', 
+  'solargraph',
+  -- 'tsserver', 
+  -- 'tailwindcss', 
+  'emmet_ls',
+  'gopls', 
+  'ccls', 
+  'eslint' 
+  -- 'vscode-css-language-server --stdio',
+  -- 'vscode-eslint-language-server --stdio',
+  -- 'vscode-html-language-server --stdio',
+  -- 'vscode-json-language-server --stdio',
+}
+
 for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     capabilities = capabilities,

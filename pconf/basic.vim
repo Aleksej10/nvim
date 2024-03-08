@@ -26,8 +26,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 set listchars=tab:>~
 set list
 
-set guifont=hive:h12
-" set guifont=hive:h8
+" set guifont=hive:h12
+set guifont=hive:h8
 
 " Splits open at the bottom and right
 set splitbelow splitright
@@ -94,6 +94,7 @@ nnoremap <C-s> :w!<cr>
 nnoremap <C-d> :x<cr>
 nnoremap <C-t> :tabnew<cr>
 cnoremap sudow w !sudo tee % >/dev/null
+cnoremap camel [a-z][A-Z]
 inoremap jk <esc>
 
 inoremap <A-;> <esc>A;<esc>
